@@ -32,3 +32,5 @@ addCommand("copy_currenturl", "Copy current URL to clipboard",
 
         }
         );
+
+// TODO: Bypass copy restrictions through background page
