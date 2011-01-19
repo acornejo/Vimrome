@@ -1,0 +1,49 @@
+#vimrome-box { 
+	line-height:40px;
+	height:auto !important;
+	z-index:100000;
+	position:fixed;
+	left:5%;
+	bottom:10%;
+	display:none;
+	overflow:auto;
+	width:90%;
+	background-color:#333;
+	opacity:0.8;
+	color:#fff;
+	margin:0;
+	font-family: Calibri, "Lucida Grande", Lucida, Arial, sans-serif;
+	padding:4px 6px;
+	text-align:left;
+	/*rounded corners*/
+	border-radius:7px;
+}
+
+#vimrome-input {
+	line-height:20px;
+    outline: none;
+    width: 99%;
+    border: 0px;
+    color: #fff;
+    background-color: transparent;
+	font-family: Calibri, "Lucida Grande", Lucida, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.hintClass {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 0 1px;
+    z-index: 100000;
+}
+
+a[highlight=hint_active] {
+    background-color: lime;
+}
+
+a[highlight=hint_inactive] {
+    background-color: yellow;
+}

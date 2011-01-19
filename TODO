@@ -1,0 +1,16 @@
+Work in progress:
+  - Copy/Paste to/from clipboard.
+     * problem is chrome blocks this right now because of security
+       issues, there might be a way to bypass by executing through
+       background page
+
+  - Help mode:
+     * Part of the infrastructure is in place, will show an on screen
+       keybinging help screen.
+
+Wanted features:
+  - Add options screen to the extension that allows full customization.
+  - Native search, should have a next/previous option.
+    * should have a next/previous actions
+    * should be very fast
+    * should highlight words.

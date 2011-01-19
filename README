@@ -1,0 +1,38 @@
+Page movement/zoom:
+j Scroll line down
+k Scroll line up
+C-d Scroll page down
+C-u Scroll page up
+h Scroll column left
+l Scroll column right
+G Scroll to bottom
+gg Scroll to top
+zz Zoom reset
+zi Zoom in
+zo Zoom out
+
+Tab management:
+r Reload
+d Close
+u Undo close
+C-i / J Previous Tab
+C-o / K Next Tab
+
+Navigation:
+H Go back
+L Go forward
+gi Goto first input box (i.e. search box)
+gu Go up one level in URL tree
+f Start hints mode
+F Start hints mode (new tab)
+o Open new URL (C-L is a highly recommended alternative)
+t Open URL in new Tab (C-T is a highly recommended alternative)
+: Start command mode (undocumented, try hints, open, tabopen, etc.)
+
+Insert mode (textarea) bindings:
+C-a Goto beginning of line
+C-e Goto end of line
+C-f Forward one character
+C-b Backward one character
+C-u Delete from cursor to BOL
+C-k Delete from cursor to EOL
