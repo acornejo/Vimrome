@@ -1,2 +1,2 @@
 all:
-	zip vimrome.zip * -x Makefile \*.zip
+	zip vimrome.crx * -x Makefile \*.zip \*.crx
