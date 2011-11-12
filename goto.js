@@ -1,27 +1,19 @@
 function followRelation(rel,pattern) {
-    function followFrame(frame) {
-        var elems = frame.document.getElementsByTagName("a");
-        for (var i=0, ilen=elems.length; elem=elems[i], i<ilen; i++)
-            if (elem.rel.toLowerCase() == rel ||
-                    elem.rev.toLowerCase() == rel) {
+    var elems = document.getElementsByTagName("a");
+    for (var i=0, ilen=elems.length; elem=elems[i], i<ilen; i++)
+        if (elem.rel.toLowerCase() == rel ||
+                elem.rev.toLowerCase() == rel) {
+            followLink(elem,false);
+            return;
+        }
+
+    elems = document.body.querySelectorAll('a, input:not([type=hidden]), area, textarea, select, button, *[onclick]');
+    for (var i=0, ilen=pattern.length; regex=RegExp(pattern[i],"i"), i<ilen; i++)
+        for (var j=0, jlen=elems.length; elem=elems[j], j<jlen; j++)
+            if (matchElem(regex,elem)) {
                 followLink(elem,false);
-                return true;
+                return;
             }
-
-        elems = frame.document.body.querySelectorAll('a, input:not([type=hidden]), area, textarea, select, button, *[onclick]');
-        for (var i=0, ilen=pattern.length; regex=RegExp(pattern[i],"i"), i<ilen; i++)
-            for (var j=0, jlen=elems.length; elem=elems[j], j<jlen; j++)
-                if (matchElem(regex,elem)) {
-                    followLink(elem,false);
-                    return true;
-                }
-        return false;
-    }
-
-    if (!followFrame(window)) {
-        var i = 0;
-        while (i < window.frames.length && followFrame(window.frames[i])) i++;
-    }
 }
 
 function focusFirstTextInput() {

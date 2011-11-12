@@ -1,3 +1,6 @@
+// TODO: Bypass copy restrictions through background page
+// this code is currently unused and untested
+
 function copyToClip(str)
 {
     var textarea = document.createElement("textarea");
@@ -23,14 +26,15 @@ function pasteFromClip()
     text.execCommand("Paste");
     var str = textarea.value;
     document.body.removeChild(textarea);
+    return str;
 
 }
 
-addCommand("copy_currenturl", "Copy current URL to clipboard",
-        function (args) {
-            url = location.href;
+addCommand("copyurl", "Copy current URL to clipboard",
+        function (args) { copyToClip(location.href); });
 
-        }
-        );
+addCommand("pasteurl", "Open URL stored in clipboard",
+        function (args) {execCommand("open "+pasteFromClip());});
 
-// TODO: Bypass copy restrictions through background page
+addCommand("pasteurlnewtab", "Open URL stored in clipboard in new tab",
+        function (args) {execCommand("newtab "+pasteFromClip());});

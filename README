@@ -23,6 +23,8 @@ H Go back
 L Go forward
 gi Goto first input box (i.e. search box)
 gu Go up one level in URL tree
+]] Go to next page (i.e. next 10 search results)
+[[ Go to previous page (i.e. previous 10 search results)
 f Start hints mode
 F Start hints mode (new tab)
 o Open new URL (C-L is a highly recommended alternative)

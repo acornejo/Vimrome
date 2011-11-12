@@ -1,4 +1,4 @@
-var exclude_urls = [/\/\/www\.google\.[^\/]+\/reader\//, /\/\/mail\.google\.com\/mail\//, /\/\/docs\.google\.com\//, /\/\/www\.facebook\.com\//]
+var exclude_urls = [/\/\/www\.google\.[^\/]+\/reader\//, /\/\/mail\.google\.com\/mail\//, /\/\/docs\.google\.com\//, /\/\/www\.facebook\.com\//, /\/\/www\.pandora\.com\//]
 for (var i = 0; i < exclude_urls.length; i++) {
     if (exclude_urls[i].test(location.href))
         return;
@@ -200,6 +200,8 @@ var keyId = {
     "U+007D" : "}",
     "U+007F" : "Delete",
     "U+00A1" : "¡",
+    "U+00DB" : "[",
+    "U+00DD" : "]",
     "U+0300" : "CombGrave",
     "U+0300" : "CombAcute",
     "U+0302" : "CombCircum",
