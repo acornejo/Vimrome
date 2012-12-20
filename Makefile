@@ -1,2 +1,2 @@
 all:
-	zip vimrome.crx * -x Makefile \*.zip \*.crx
+	google-chrome --pack-extension=${PWD} --pack-extension-key=${HOME}/.ssh/chrome.pem

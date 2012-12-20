@@ -1,7 +1,9 @@
 {
   "name": "Vimrome",
   "version": "1.0",
-  "description": "VIM like keyboard control",
+  "description": "VIM-like keyboard control for chrome. This is
+      extension attempts to give you the benefits of vim-like
+      keybindings without being overly obtrusive. ",
   "icons": {"128":"icon.png"},
   "background_page": "background.html",
   "content_scripts": [ {
